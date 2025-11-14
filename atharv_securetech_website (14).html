@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atharv SecureTech</title>
+  <style>
+    body { margin: 0; font-family: 'Inter', sans-serif; background:#F5F7FA; color:#0B1220; }
+    header { background:#0B1220; color:white; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; }
+    header h1 { margin:0; font-size:24px; }
+    nav a { color:white; margin-left:20px; text-decoration:none; font-weight:500; }
+    nav a:hover { text-decoration:underline; }
+
+    section { padding:80px 40px; max-width:1200px; margin:auto; }
+
+    .hero { padding:140px 40px; max-width:900px; }
+    .hero h2 { font-size:48px; margin-bottom:20px; }
+    .hero p { font-size:20px; margin-bottom:30px; line-height:1.6; }
+    .button { background:#4DD0E1; padding:14px 26px; color:#0B1220; border-radius:8px; text-decoration:none; font-weight:bold; }
+    .button:hover { background:#3ABAC8; }
+
+    .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:25px; }
+    .service-card { background:white; padding:30px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+    .service-card h3 { margin-top:0; }
+    .service-card p { color:#444; }
+
+    .team-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:30px; }
+    .team-card { background:white; padding:20px; border-radius:12px; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+    .team-card img { width:120px; height:120px; border-radius:50%; object-fit:cover; margin-bottom:15px; }
+    .team-card h4 { margin:0; }
+    .team-card p { color:#444; font-size:14px; }
+
+    footer { background:#0B1220; color:white; text-align:center; padding:40px 20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Atharv SecureTech</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#research">Research</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h2>Innovating Trust in a Connected World</h2>
+  <p>Research-driven cybersecurity, IoT security and quantum‑resistant protection for tomorrow’s digital infrastructure.</p>
+  <a href="#services" class="button">Explore Our Services</a>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services-grid">
+    <div class="service-card"><h3>Cybersecurity</h3><p>Threat analysis, enterprise protection and secure infrastructure development.</p></div>
+    <div class="service-card"><h3>IoT Security</h3><p>Embedded security, firmware validation and device-level protection.</p></div>
+    <div class="service-card"><h3>Quantum Cryptography</h3><p>Lightweight encryption and quantum-resistant algorithms.</p></div>
+    <div class="service-card"><h3>R&D & Innovation</h3><p>Cutting-edge research in AI security, cryptography and embedded systems.</p></div>
+    <div class="service-card"><h3>Training & Advisory</h3><p>Cybersecurity workshops, consulting and capability building.</p></div>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research & Innovation</h2>
+  <p>We work on advanced cryptography, AI-driven cybersecurity and secure IoT architectures. Our projects include lightweight ciphers, post-quantum protocols and adversarial defense systems.</p>
+</section>
+
+<section id="team">
+  <h2>Leadership</h2>
+  <div class="team-grid" style="max-width:400px; margin:auto; grid-template-columns:1fr;">
+    <div class="team-card">
+      <img src="images/director.jpg" alt="Director Photo" />
+      <h4>Manish Kumar</h4>
+      <p>Co‑founder & Director</p>
+    </div>
+  </div>
+
+  <h2 style="margin-top:60px;">Our Interns</h2>
+  <div class="team-grid">
+    <div class="team-card"><img src="images/intern1.jpg"><h4>Varun V</h4><p>Cybersecurity Intern</p></div>
+    <div class="team-card"><img src="images/intern2.jpg"><h4>Intern 2</h4><p>IoT Security Intern</p></div>
+    <div class="team-card"><img src="images/intern3.jpg"><h4>Intern 3</h4><p>R&D Intern</p></div>
+    <div class="team-card"><img src="images/intern4.jpg"><h4>Intern 4</h4><p>Embedded Systems Intern</p></div>
+    <div class="team-card"><img src="images/intern5.jpg"><h4>Intern 5</h4><p>AI & Security Intern</p></div>
+    <div class="team-card"><img src="images/intern6.jpg"><h4>Intern 6</h4><p>Consulting Intern</p></div>
+  </div>
+</section>
+
+<section id="contact" style="text-align:center;">
+  <h2>Contact Us</h2>
+  <p>Email: <strong>atharvsecuretech@gmail.com</strong></p>
+  <p>Address:<br>TBI, BITS Pilani Hyderabad Campus,<br>Jawahar Nagar, Shameerpet Mandal,<br>Hyderabad, Telangana – 500078</p>
+</section>
+
+<footer>
+  © 2025 Atharv SecureTech Pvt. Ltd.
+</footer>
+
+</body>
+</html>

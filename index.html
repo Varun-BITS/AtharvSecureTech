@@ -38,11 +38,11 @@
 <header>
   <h1>Atharv SecureTech</h1>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#research">Research</a>
-    <a href="#team">Team</a>
-    <a href="#contact">Contact</a>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('services')">Services</a>
+    <a href="#" onclick="showPage('research')">Research</a>
+    <a href="#" onclick="showPage('team')">Team</a>
+    <a href="#" onclick="showPage('contact')">Contact Us</a>
   </nav>
 </header>
 
@@ -56,85 +56,119 @@
   <h2>Our Services</h2>
   <div class="services-grid">
 
-    <div class="service-card" onclick="toggleService('cyber')">
+    <div class="service-card">
       <h3>Cybersecurity</h3>
-      <p>Threat analysis, enterprise protection and secure infrastructure development.</p>
-    </div>
-    <div id="cyber" class="service-detail" style="display:none; background:white; padding:25px; border-radius:12px; margin-top:10px; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
-      <h3>Cybersecurity – Detailed Overview</h3>
-      <ul>
-        <li>Penetration Testing & Vulnerability Assessment</li>
-        <li>Secure Network Architecture Design</li>
-        <li>Threat Modeling & Attack Simulations</li>
-        <li>Zero‑Trust Security Implementation</li>
-        <li>Incident Response & Digital Forensics</li>
-      </ul>
+      <p>Threat analysis, enterprise protection and secure infrastructure.</p>
+      <a class="button" style="margin-top:15px; display:inline-block;" onclick="showPage('cyber-page')">Know More</a>
     </div>
 
-    <div class="service-card" onclick="toggleService('iot')">
+    <div class="service-card">
       <h3>IoT Security</h3>
-      <p>Embedded security, firmware validation and device-level protection.</p>
-    </div>
-    <div id="iot" class="service-detail" style="display:none; background:white; padding:25px; border-radius:12px; margin-top:10px; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
-      <h3>IoT Security – Detailed Overview</h3>
-      <ul>
-        <li>Secure Firmware Development & Validation</li>
-        <li>Secure Bootloaders for IoT Hardware</li>
-        <li>Embedded Device Vulnerability Assessment</li>
-        <li>IoT Communication Protocol Hardening</li>
-        <li>End‑to‑End IoT Threat Monitoring</li>
-      </ul>
+      <p>Embedded security, firmware validation and device protection.</p>
+      <a class="button" style="margin-top:15px; display:inline-block;" onclick="showPage('iot-page')">Know More</a>
     </div>
 
-    <div class="service-card" onclick="toggleService('quantum')">
+    <div class="service-card">
       <h3>Quantum Cryptography</h3>
-      <p>Lightweight encryption and quantum-resistant algorithms.</p>
-    </div>
-    <div id="quantum" class="service-detail" style="display:none; background:white; padding:25px; border-radius:12px; margin-top:10px; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
-      <h3>Quantum Cryptography – Detailed Overview</h3>
-      <ul>
-        <li>Design of Quantum‑Safe Encryption Standards</li>
-        <li>Lightweight Cryptography for Edge Devices</li>
-        <li>Post‑Quantum Secure Protocol Development</li>
-        <li>Mathematical Optimization of Encryption Schemes</li>
-        <li>Research Collaboration with Academia</li>
-      </ul>
+      <p>Lightweight encryption and quantum-safe algorithms.</p>
+      <a class="button" style="margin-top:15px; display:inline-block;" onclick="showPage('quantum-page')">Know More</a>
     </div>
 
-    <div class="service-card" onclick="toggleService('rnd')">
+    <div class="service-card">
       <h3>R&D & Innovation</h3>
-      <p>Cutting-edge research in AI security, cryptography and embedded systems.</p>
-    </div>
-    <div id="rnd" class="service-detail" style="display:none; background:white; padding:25px; border-radius:12px; margin-top:10px; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
-      <h3>R&D & Innovation – Detailed Overview</h3>
-      <ul>
-        <li>AI‑Driven Threat Prediction & Detection</li>
-        <li>Advanced Cryptographic Protocol Design</li>
-        <li>Embedded System Security Research</li>
-        <li>Prototype Design for Secure IoT Hardware</li>
-        <li>Collaboration with Research Institutions</li>
-      </ul>
+      <p>Exploratory research in AI security, cryptography and IoT systems.</p>
+      <a class="button" style="margin-top:15px; display:inline-block;" onclick="showPage('rnd-page')">Know More</a>
     </div>
 
-    <div class="service-card" onclick="toggleService('training')">
+    <div class="service-card">
       <h3>Training & Advisory</h3>
-      <p>Cybersecurity workshops, consulting and capability building.</p>
-    </div>
-    <div id="training" class="service-detail" style="display:none; background:white; padding:25px; border-radius:12px; margin-top:10px; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
-      <h3>Training & Advisory – Detailed Overview</h3>
-      <ul>
-        <li>Cybersecurity Awareness Workshops</li>
-        <li>IoT Security Training for Developers</li>
-        <li>Corporate Security Advisory Programs</li>
-        <li>Academic Mentoring & Technical Sessions</li>
-        <li>Customized Training Modules</li>
-      </ul>
+      <p>Cybersecurity workshops and capability-building programs.</p>
+      <a class="button" style="margin-top:15px; display:inline-block;" onclick="showPage('training-page')">Know More</a>
     </div>
 
   </div>
 </section>
 
+<!-- OVERVIEW PAGES -->
+<section id="cyber-page" style="display:none; padding:80px 40px; max-width:900px; margin:auto; line-height:1.9;">
+  <h2>Cybersecurity – Detailed Overview</h2>
+  <p>Our cybersecurity division focuses on comprehensive, research-driven security engineering. We design systems that can withstand modern threats and help organizations build resilient infrastructures.</p>
+  <h3>What We Offer</h3>
+  <ul>
+    <li><strong>Penetration Testing:</strong> Web, mobile, network and IoT device testing.</li>
+    <li><strong>Threat Modeling:</strong> Identifying vulnerabilities proactively using STRIDE, MITRE ATT&CK.</li>
+    <li><strong>Incident Response:</strong> Post-breach analysis, recovery and forensics.</li>
+    <li><strong>Security Architecture:</strong> Zero-trust design for enterprises.</li>
+    <li><strong>Red Teaming:</strong> Simulated adversarial attacks to test defenses.</li>
+  </ul>
+  <a class="button" onclick="showPage('services')">Back to Services</a>
+</section>
+
+<section id="iot-page" style="display:none; padding:80px 40px; max-width:900px; margin:auto; line-height:1.9;">
+  <h2>IoT Security – Detailed Overview</h2>
+  <p>We build secure IoT solutions with a holistic approach covering hardware, firmware, cloud integration and communication protocols.</p>
+  <h3>Our IoT Security Expertise</h3>
+  <ul>
+    <li><strong>Secure Firmware Engineering:</strong> Integrity validation and anti-tampering systems.</li>
+    <li><strong>Secure Boot:</strong> Hardware-rooted trust mechanisms.</li>
+    <li><strong>Protocol Hardening:</strong> MQTT, CoAP, BLE, LoRaWAN, etc.</li>
+    <li><strong>IoT Vulnerability Assessment:</strong> Surface analysis for smart devices.</li>
+    <li><strong>Device Identity & Access Control:</strong> Secure onboarding frameworks.</li>
+  </ul>
+  <a class="button" onclick="showPage('services')">Back to Services</a>
+</section>
+
+<section id="quantum-page" style="display:none; padding:80px 40px; max-width:900px; margin:auto; line-height:1.9;">
+  <h2>Quantum Cryptography – Detailed Overview</h2>
+  <p>As quantum computing advances, classical encryption becomes vulnerable. Our research advances the creation of quantum‑safe cryptographic algorithms for long-term security.</p>
+  <h3>Capabilities</h3>
+  <ul>
+    <li><strong>Post‑Quantum Algorithms:</strong> Lattice‑based, code‑based, multivariate schemes.</li>
+    <li><strong>Lightweight Encryption:</strong> Ultra‑efficient ciphers for low-energy IoT devices.</li>
+    <li><strong>Secure Key Exchange:</strong> Forward-secure, quantum-resistant communication.</li>
+    <li><strong>Mathematical Model Optimization:</strong> Faster, more secure transformations.</li>
+  </ul>
+  <a class="button" onclick="showPage('services')">Back to Services</a>
+</section>
+
+<section id="rnd-page" style="display:none; padding:80px 40px; max-width:900px; margin:auto; line-height:1.9;">
+  <h2>R&D & Innovation – Detailed Overview</h2>
+  <p>Our internal R&D division innovates new solutions before they become industry standards. While we do not currently maintain external collaborations, we focus heavily on concept development and experimental prototypes.</p>
+  <h3>Research Focus Areas</h3>
+  <ul>
+    <li><strong>AI‑Powered Cyber Defense:</strong> Threat prediction models, anomaly detection and behavioral analysis.</li>
+    <li><strong>Secure IoT Architecture:</strong> Integrated framework for consumer and industrial IoT protection.</li>
+    <li><strong>New Cryptographic Modules:</strong> Lightweight ciphers, secure hash functions, device‑level encryption.</li>
+    <li><strong>Embedded System Security:</strong> Secure firmware, trusted execution environments.</li>
+  </ul>
+  <a class="button" onclick="showPage('services')">Back to Services</a>
+</section>
+
+<section id="training-page" style="display:none; padding:80px 40px; max-width:900px; margin:auto; line-height:1.9;">
+  <h2>Training & Advisory – Detailed Overview</h2>
+  <p>Our training programs are designed for students, startups and organizations looking to build modern cybersecurity capability.</p>
+  <h3>Programs Offered</h3>
+  <ul>
+    <li><strong>Cybersecurity Foundations:</strong> Introduction to threat analysis, encryption and digital forensics.</li>
+    <li><strong>Hands‑On Hacking Labs:</strong> Web exploitation, malware labs, OSINT, network attacks.</li>
+    <li><strong>IoT Security for Engineers:</strong> Embedded hacking, hardware forensics.</li>
+    <li><strong>Custom Advisory Sessions:</strong> Tailored security guidance for early‑stage startups.</li>
+  </ul>
+  <a class="button" onclick="showPage('services')">Back to Services</a>
+</section>
+
 <script>
+function showPage(id){
+  const all = ['home','services','research','team','contact','cyber-page','iot-page','quantum-page','rnd-page','training-page'];
+  all.forEach(sec => {
+    const el = document.getElementById(sec);
+    if(el) el.style.display = 'none';
+  });
+  const target = document.getElementById(id);
+  if(target) target.style.display = 'block';
+  window.scrollTo(0,0);
+}
+</script>
 function toggleService(id) {
   const el = document.getElementById(id);
   if (el.style.display === "none") {
@@ -158,15 +192,6 @@ function toggleService(id) {
     <li><strong>Network & Protocol Security:</strong> Development of secure communication protocols for IoT and distributed systems.</li>
   </ul>
 
-  <h3>Current Research Projects</h3>
-  <ul style="line-height:1.8; font-size:17px;">
-    <li><strong>Lightweight Block Cipher for IoT:</strong> A highly efficient encryption algorithm designed to secure low‑energy devices such as sensors and wearables.</li>
-    <li><strong>Quantum‑Safe IoT Communication Stack:</strong> Development of forward‑secure, quantum‑robust key‑exchange protocols for connected systems.</li>
-    <li><strong>AI‑Powered Threat Intelligence Engine:</strong> A system that learns from real‑world attacks and automatically predicts emerging threats.</li>
-    <li><strong>Secure Smart‑Home Architecture:</strong> An end‑to‑end framework ensuring device, network, and cloud‑level protection for consumer IoT.</li>
-    <li><strong>Embedded Secure Bootloader:</strong> Firmware‑level protection ensuring device authenticity, rollback‑prevention, and anti‑tampering capabilities.</li>
-  </ul>
-
   <h3>Innovation Pipeline</h3>
   <p>Our innovation pipeline focuses on converting research outcomes into real‑world products and solutions. This includes:</p>
   <ul style="line-height:1.8; font-size:17px;">
@@ -174,15 +199,6 @@ function toggleService(id) {
     <li>Collaborative R&D with academic institutions and industry labs.</li>
     <li>Patent filing for new algorithms and security architectures.</li>
     <li>Technology transfer and startup collaboration programs.</li>
-  </ul>
-
-  <h3>Academic & Industry Collaborations</h3>
-  <p>Our research is strengthened through active collaborations with:</p>
-  <ul style="line-height:1.8; font-size:17px;">
-    <li>BITS Pilani Hyderabad Campus</li>
-    <li>Incubators & innovation labs</li>
-    <li>Cybersecurity research groups</li>
-    <li>Industry partners working on secure IoT, AI and embedded systems</li>
   </ul>
 
 </section>
@@ -212,6 +228,7 @@ function toggleService(id) {
 
 <section id="contact" style="text-align:center;">
   <h2>Contact Us</h2>
+  <p>Contact Number: <p>
   <p>Email: <strong>atharvsecuretech@gmail.com</strong></p>
   <p>Address:<br>TBI, BITS Pilani Hyderabad Campus,<br>Jawahar Nagar, Shameerpet Mandal,<br>Hyderabad, Telangana – 500078</p>
 </section>
